@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          search-paths: config-repo
+          username:         # 公共仓库可以不用用户名和密码
+          password:
+      label: master
+
+server:
+  port: 8888
+
