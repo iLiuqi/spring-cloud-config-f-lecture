@@ -5,7 +5,15 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:8888/
+#      uri: http://localhost:8888/
+      discovery:
+        enabled: true
+        service-id: config-server   # 不再固定config-server的地址，因为config-server会启多个实例，负载均衡，集群化，以实现高可用
 
 server:
   port: 8881
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8889/eureka/

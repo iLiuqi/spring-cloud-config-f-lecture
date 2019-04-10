@@ -7,10 +7,14 @@ spring:
         git:
           uri: https://github.com/liu-qi/spring-cloud-config-f-lecture
           search-paths: config-repo
-          username:         # 公共仓库可以不用用户名和密码
+          username:   # 公共仓库可以不用用户名和密码
           password:
       label: master
 
 server:
-  port: 8888
+  port: 8763
 
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
