@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/liu-qi/spring-cloud-config-f-lecture
           search-paths: config-repo
           username:         # 公共仓库可以不用用户名和密码
           password:
